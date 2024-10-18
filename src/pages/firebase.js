@@ -99,8 +99,8 @@ const Firebase = () => {
 
         <ul>
         {
-          imgUrl.map((item)=>
-            <li>
+          imgUrl.map((item, idx)=>
+            <li key={idx}>
               <figure><img src={item.url}/></figure>
               <button onClick={()=>delImage(item.name)}>삭제</button>
             </li>
